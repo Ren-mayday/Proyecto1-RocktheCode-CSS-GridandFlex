@@ -24,6 +24,7 @@ a {
   --footer-color: #11083e;
 }
 
+/* NAVBAR - RESPONSIVE */
 header {
   background-color: var(--seconday-color);
   position: fixed;
@@ -70,13 +71,13 @@ nav > .left-side-menu > ul > li > a {
   color: var(--tertiary-color);
 }
 
-button {
+.nav-btn {
   display: flex;
   align-items: center;
   background-color: var(--primary-color);
   color: var(--seconday-color);
   font-weight: 600;
-  padding: 14px 18px;
+  padding: 14px 28px;
   border-radius: 30px;
   border: none;
   gap: 5px;
@@ -105,4 +106,69 @@ button {
   .menu-hamburger {
     display: block;
   }
+}
+
+/* HERO DIVIDIDO EN DOS Parte IZQ. info, Parte DRCHA IMÁGENES DE PODCASTS */
+
+/* pongo margin y padding para que no se solape con el navbar*/
+main {
+  position: relative;
+  margin-top: 12%;
+  padding: 20px;
+}
+
+/* le pongo display flex para que quede la (info.) parte IZQ. e (imágenes) parte DRCHA  queden en row*/
+.hero {
+  display: flex;
+}
+
+.hero-info {
+  max-width: 500px;
+}
+
+/* Títulos de la parte IZQ.*/
+h1 {
+  font-size: 45px;
+  margin-bottom: 48px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 48px;
+}
+/* button del hero de la parte IZQ. */
+.trial-btn {
+  background-color: var(--primary-color);
+  color: var(--seconday-color);
+  border: none;
+  padding: 17px 50px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ul, li del hero de la parte IZQ.*/
+ul.service-characteristics {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+ul.service-characteristics > li {
+  margin: 16px;
+}
+
+ul.service-characteristics li:before {
+  content: "☑️";
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  margin: 10px 10px;
+}
+
+/* Estilos del hero de la parte DRCHA */
+.podcasts-gallery-imgs > img {
+  width: 80px;
+  height: 80px;
 }
