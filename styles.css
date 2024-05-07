@@ -8,8 +8,16 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: var(--seconday-color);
+}
+
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -17,9 +25,13 @@ a {
 }
 
 :root {
-  --primary-color: #845af9;
+  --primary-color: #794cf8;
   --seconday-color: #eaeaea;
   --tertiary-color: #000;
+  --btn-boxes-color: #ffffff;
+  --hover-btn-color: #845af9;
+  --details-color: #11083e;
+  --card-color: #877dea;
   --special-color: #241b4d;
   --footer-color: #11083e;
 }
@@ -43,6 +55,10 @@ nav {
 .left-side-menu {
   display: flex;
   gap: 50px;
+}
+
+.podimo-logo {
+  cursor: pointer;
 }
 
 .nav-list {
@@ -83,12 +99,20 @@ nav > .left-side-menu > ul > li > a {
   gap: 5px;
 }
 
+.nav-btn:hover {
+  background-color: var(--hover-btn-color);
+}
+
 .right-side-menu > button > span {
   color: var(--seconday-color);
 }
 
 .right-side-menu > span {
   color: var(--primary-color);
+}
+
+.right-side-menu > span:hover {
+  color: var(--special-color);
 }
 
 .menu-hamburger {
@@ -112,19 +136,18 @@ nav > .left-side-menu > ul > li > a {
 
 /* pongo margin y padding para que no se solape con el navbar*/
 main {
-  background-color: var(--seconday-color);
-  position: relative;
-  margin-top: 12%;
-  padding: 20px;
+  margin-top: 8%;
 }
 
 /* le pongo display flex para que quede la (info.) parte IZQ. e (imágenes) parte DRCHA  queden en row*/
-.hero {
+#hero {
+  background-color: var(--seconday-color);
   display: flex;
+  padding: 20px;
+  margin-bottom: 10%;
 }
 
 .hero-info {
-  margin-left: 1.5%;
   width: 50%;
   height: 50%;
 }
@@ -136,7 +159,7 @@ h1 {
   line-height: 1;
 }
 
-h2 {
+#hero h2 {
   font-size: 20px;
   color: var(--primary-color);
   margin-bottom: 48px;
@@ -151,6 +174,10 @@ h2 {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 600;
+}
+
+.trial-btn:hover {
+  background-color: var(--hover-btn-color);
 }
 
 /* ul, li del hero de la parte IZQ.*/
@@ -253,7 +280,7 @@ ul.service-characteristics li:before {
 }
 
 @media (max-width: 840px) {
-  .hero {
+  #hero {
     display: flex;
     flex-wrap: wrap;
   }
@@ -265,5 +292,195 @@ ul.service-characteristics li:before {
 
   .podcasts-imgs {
     margin-top: 8%;
+  }
+}
+
+/*Section dinámica con vídeo*/
+#dinamic-info {
+  background-color: var(--details-color);
+  display: flex;
+  padding: 20px;
+}
+
+.video-right-side {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+video {
+  max-width: 600px;
+  min-width: 250px;
+  height: 500px;
+}
+
+.poscast-info {
+  min-width: 250px;
+  margin: auto;
+  margin-left: 2%;
+}
+
+.poscast-info h2 {
+  font-size: 35px;
+  margin-bottom: 16px;
+}
+
+.poscast-info h2,
+p {
+  color: var(--seconday-color);
+  line-height: 1.8;
+}
+
+.trial-btn-2 {
+  background-color: var(--primary-color);
+  color: var(--seconday-color);
+  border: none;
+  padding: 17px 50px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.trial-btn-2:hover {
+  background-color: var(--hover-btn-color);
+}
+
+@media (max-width: 750px) {
+  #dinamic-info {
+    display: block;
+    margin: auto;
+  }
+
+  .video-right-side {
+    width: 100%;
+  }
+
+  .podcast-info {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* Section, apartado que da información de las suscripciones */
+
+#subscription-info {
+  background-color: var(--seconday-color);
+  width: 100%;
+  margin-top: 2%;
+  padding: 20px;
+}
+
+.service-includes h2 {
+  font-size: 55px;
+  max-width: 800px;
+  min-width: 250px;
+  margin: auto;
+  padding: 20px;
+}
+
+h4 {
+  margin-left: 29%;
+  padding: 10px;
+}
+
+ul.list-service-includes {
+  margin-left: 30%;
+}
+
+ul.list-service-includes li::before {
+  content: "✔️";
+}
+
+/*Suscripción boxes estilos */
+.types-of-suscriptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 1rem;
+}
+
+.anual-suscription-container {
+  background-color: var(--card-color);
+  width: 400px;
+  height: 315px;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+u {
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 2px 8px;
+}
+
+ul.anual-benefits > li {
+  line-height: 1.8;
+}
+
+ul.monthly-benefits > li {
+  line-height: 1.8;
+}
+
+.anual-plan-btn {
+  background-color: var(--details-color);
+  color: var(--btn-boxes-color);
+  width: 100%;
+  align-content: center;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 100px;
+  border: none;
+  margin-top: 10%;
+}
+
+.anual-plan-btn:hover {
+  background-color: var(--special-color);
+}
+
+.anual-suscription-container h2 {
+  padding: 10px 0px 5px 0px;
+  line-height: 1;
+}
+
+.monthly-suscription-container {
+  background-color: var(--btn-boxes-color);
+  width: 350px;
+  height: 315px;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.monthly-plan-btn {
+  background-color: var(--primary-color);
+  color: var(--btn-boxes-color);
+  width: 100%;
+  align-content: center;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 100px;
+  border: none;
+  margin-top: 40%;
+}
+
+.monthly-plan-btn:hover {
+  background-color: var(--hover-btn-color);
+}
+
+@media (max-width: 805px) {
+  .service-includes h2 {
+    font-size: 250%;
+  }
+
+  .monthly-suscription-container {
+    width: 400px;
+    height: 200px;
+  }
+  .monthly-plan-btn {
+    margin-top: 2.5%;
   }
 }
