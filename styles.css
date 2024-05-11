@@ -525,7 +525,9 @@ ul.list-suggestions {
   padding: 20px;
 }
 
-.list-most-trendy h4 {
+.list-most-trendy h4,
+.list-releases h4,
+.list-suggestions h4 {
   color: var(--seconday-color);
   font-size: 24px;
 }
@@ -537,7 +539,9 @@ ul.list-suggestions {
   padding: 15px 15px 15px 0px;
 }
 
-ul.list-most-trendy h4 {
+ul.list-most-trendy h4,
+ul.list-releases h4,
+ul.list-suggestions h4 {
   margin-left: 0;
   max-width: 200px;
 }
