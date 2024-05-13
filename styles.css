@@ -587,6 +587,7 @@ footer .footer-info {
   background-color: var(--footer-color);
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 footer h2 {
