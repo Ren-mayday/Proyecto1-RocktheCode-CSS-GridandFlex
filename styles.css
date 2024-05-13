@@ -579,3 +579,113 @@ ul.list-suggestions h4 {
   width: 40px;
   height: 40px;
 }
+
+/*Footer*/
+
+footer .footer-info {
+  background-color: var(--footer-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+footer h2 {
+  color: var(--seconday-color);
+  padding: 20px 20px 20px 0px;
+}
+
+footer ul li {
+  font-size: 14px;
+}
+
+ul.useful-links > li > a {
+  color: var(--footer-links-color);
+  font-weight: 500;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+ul.podcasters > li > a {
+  color: var(--footer-links-color);
+  font-weight: 500;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+ul.podcasters {
+  text-align: center;
+}
+
+/*Social media logos imgs*/
+
+.find-us-social-media {
+  display: flex;
+  gap: 25px;
+}
+
+.facebook-logo,
+.instagram-logo,
+.twitter-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/*Payment methods logo img*/
+
+.find-us-social-media {
+  margin-bottom: 25px;
+}
+
+.contact-us select {
+  background-color: var(--footer-color);
+  color: var(--footer-links-color);
+  height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.payment-methods p {
+  color: var(--footer-links-color);
+}
+
+.list-payment-methods {
+  display: flex;
+  gap: 10px;
+}
+
+.lock {
+  background-color: var(--footer-color);
+  width: 20px;
+  height: 20px;
+}
+
+.visa {
+  width: 45px;
+  height: 35px;
+  border-radius: 8px;
+}
+.mastercard,
+.amex,
+.paypal,
+.applepay {
+  width: 45px;
+  height: 25px;
+  border-radius: 8px;
+}
+
+.terms-and-conditions {
+  background-color: var(--footer-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.terms-and-conditions a {
+  color: var(--seconday-color);
+  text-decoration: underline;
+}
+
+.terms-and-conditions p {
+  color: var(--footer-links-color);
+}
